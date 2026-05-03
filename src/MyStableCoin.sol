@@ -12,9 +12,9 @@ import {ERC20Permit} from "lib/openzeppelin-contracts/contracts/token/ERC20/exte
 
 contract MyStableCoin is ERC20, ERC20Burnable, ERC20Pausable, Ownable, ERC1363, ERC20Permit, ERC20FlashMint {
     constructor(address initialOwner)
-        ERC20("MyToken", "MTK")
+        ERC20("MyStableCoin", "MSC")
         Ownable(initialOwner)
-        ERC20Permit("MyToken")
+        ERC20Permit("MyStableCoin")
     {}
 
     function pause() public onlyOwner {
