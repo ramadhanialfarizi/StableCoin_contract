@@ -11,7 +11,7 @@ contract MyStableCoinScript is Script {
     function run() public {
         vm.startBroadcast();
 
-        myToken = new MyStableCoin(msg.sender);
+        myStableCoin = new MyStableCoin(msg.sender);
 
         vm.stopBroadcast();
     }
